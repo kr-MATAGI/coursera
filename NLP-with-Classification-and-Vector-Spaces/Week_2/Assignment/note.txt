@@ -1,0 +1,27 @@
+train_[pos|neg] -> training 을 위한 str 모음
+train_y -> training data에 대한 정답 모음
+
+test_[pos|neg] -> test를 위한 str 모음
+test_y -> test data에 대한 정답 모음
+
+
+i am rather excited", "you are rather happy
+-> [rather, excit, happi]
+-> { ('word', label) : count }
+			key		 : 	val
+			
+------------------------------------------------------------
+ㅋ
+P(D_pos)와 P(D_neg)를 구해야 함
+
+D -> total number of doc
+
+* log(A/B) = log(A) - log(B)
+logprior = log(P(D_pos)) - log(P(D_neg))
+		 = log(D_pos) - log(D_neg)
+		 
+		 
+N_pos, N_neg -> 모든 doc(혹은 tweets에서) 긍정 및 부정적 단어의 수
+V -> 긍정적이든 부정적이든 모든 class에서 unique word의 수
+
+동일 단어의 likehood를 계산하기 위해 log likelihood를 사용할 수 있다.
