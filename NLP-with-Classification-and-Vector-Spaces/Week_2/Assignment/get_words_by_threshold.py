@@ -33,7 +33,7 @@ def get_words_by_threshold(freqs, label, threshold):
             word_list[word] = pos_neg_ratio
 
         # If the label is 0 and the pos_neg_ratio is less than or equal to the threshold...
-        elif label == 0 and pos_neg_ratio['ratio'] < threshold:
+        elif label == 0 and pos_neg_ratio['ratio'] <= threshold:
 
             # Add the pos_neg_ratio to the dictionary
             word_list[word] = pos_neg_ratio

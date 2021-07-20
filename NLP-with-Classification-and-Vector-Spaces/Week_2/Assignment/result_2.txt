@@ -1,0 +1,15 @@
+Code Cell UNQ_C1: Function 'count_tweets' is correct.
+Code Cell UNQ_C2: Function 'train_naive_bayes' is correct.
+Code Cell UNQ_C3: The value of your variable 'logprior' is correct.
+Code Cell UNQ_C3: The value of your variable 'loglikelihood' is correct.
+Code Cell UNQ_C4: Function 'naive_bayes_predict' is correct.
+Code Cell UNQ_C5: The value of your variable 'p' is correct.
+Code Cell UNQ_C6: Function 'test_naive_bayes' is correct.
+Code Cell UNQ_C7: Your console output is correct.
+
+
+
+Code Cell UNQ_C8: Function 'get_ratio' is incorrect. Check implementation.
+Code Cell UNQ_C9: Function 'get_words_by_threshold' is incorrect. Check implementation. 
+If you see many functions being marked as incorrect, try to trace back your steps & identify if there is an incorrect function that is being used in other steps.
+This dependency may be the cause of the errors.

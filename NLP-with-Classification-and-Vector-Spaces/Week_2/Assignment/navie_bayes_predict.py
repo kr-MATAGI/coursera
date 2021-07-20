@@ -27,7 +27,7 @@ def naive_bayes_predict(tweet, logprior, loglikelihood):
         # check if the word exists in the loglikelihood dictionary
         if word in loglikelihood:
             # add the log likelihood of that word to the probability
-            p += loglikelihood.get(word)
+            p += loglikelihood[word]
 
     ### END CODE HERE ###
 
