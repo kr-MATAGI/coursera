@@ -9,13 +9,15 @@ def compute_pca(X, n_components=2):
 
     ### START CODE HERE (REPLACE INSTANCES OF 'None' with your code) ###
     # mean center the data
+    
+    #열을 따라 계산된 산술 평균
     X_demeaned = X - np.mean(X, axis=0)
 
     # calculate the covariance matrix
     covariance_matrix = np.cov(X_demeaned, rowvar=False)
     
     # calculate eigenvectors & eigenvalues of the covariance matrix
-    eigen_vals, eigen_vecs = np.linalg.eigh(covariance_matrix, UPLO='L')
+    eigen_vals, eigen_vecs = np.linalg.eigh(covariance_matrix)
 
     # sort eigenvalue in increasing order (get the indices from the sort)
     idx_sorted = np.argsort(eigen_vals)
