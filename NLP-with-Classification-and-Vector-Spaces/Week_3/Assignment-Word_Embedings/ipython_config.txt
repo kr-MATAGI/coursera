@@ -1,0 +1,4 @@
+cd C:/Users/hoon9/Desktop/AI_석사/입학전/코세라/coursera/NLP-with-Classification-and-Vector-Spaces/Week_3/Assignment-Word_Embedings
+
+import sys
+sys.path.append('C:/Users/hoon9/Desktop/AI_석사/입학전/코세라/coursera/NLP-with-Classification-and-Vector-Spaces/Week_3/Assignment-Word_Embedings')
