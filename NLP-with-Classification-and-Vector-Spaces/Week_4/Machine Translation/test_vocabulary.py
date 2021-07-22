@@ -19,7 +19,7 @@ def test_vocabulary(X, Y, R):
     # loop through each row in pred (each transformed embedding)
     for i in range(len(pred)):
         # get the index of the nearest neighbor of pred at row 'i'; also pass in the candidates in Y
-        pred_idx = nearest_neighbor(X[i], Y)[-1]
+        pred_idx = nearest_neighbor(pred[i], Y)[-1]
 
         # if the index of the nearest neighbor equals the row of i... \
         if pred_idx == i:
