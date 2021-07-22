@@ -20,10 +20,10 @@ def hash_value_of_vector(v, planes):
     # set h to be false (eqivalent to 0 when used in operations) if the sign is negative,
     # and true (equivalent to 1) if the sign is positive (1,10) shaped vector
     # if the sign is 0, i.e. the vector is in the plane, consider the sign to be positive
-    h = np.where(sign_of_dot_product > 0, True, False)
+    h = np.where(sign_of_dot_product >= 0, True, False)
 
     # remove extra un-used dimensions (convert this from a 2D to a 1D array)
-    h = np.reshape(h, (10,))
+    h = np.squeeze(h)
 
     # initialize the hash value to 0
     hash_value = 0

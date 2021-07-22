@@ -22,6 +22,6 @@ def align_embeddings(X, Y, train_steps=100, learning_rate=0.0003):
         gradient = compute_gradient(X, Y, R)
 
         # update R by subtracting the learning rate times gradient
-        R -= gradient * learning_rate
+        R -= learning_rate * gradient
         ### END CODE HERE ###
     return R

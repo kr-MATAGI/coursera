@@ -13,6 +13,6 @@ def compute_gradient(X, Y, R):
 
     # gradient is X^T(XR - Y) * 2/m
     # (n x m), (m x n) = (n x n)
-    gradient = np.dot(X.T, np.dot(X, R) - Y) * 2 / m
+    gradient = (2 / m) * np.dot(X.T, np.dot(X, R) - Y) 
     ### END CODE HERE ###
     return gradient

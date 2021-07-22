@@ -44,10 +44,10 @@ def get_matrices(en_fr, french_vecs, english_vecs):
             Y_l.append(fr_vec)
 
     # stack the vectors of X_l into a matrix X
-    X = np.array(X_l)
+    X = np.vstack(X_l)
 
     # stack the vectors of Y_l into a matrix Y
-    Y = np.array(Y_l)
+    Y = np.vstack(Y_l)
     ### END CODE HERE ###
 
     return X, Y
