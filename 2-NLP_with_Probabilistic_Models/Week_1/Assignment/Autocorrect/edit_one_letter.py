@@ -13,7 +13,8 @@ def edit_one_letter(word, allow_switches = True):
     
     ### START CODE HERE ###    
     for item in delete_letter(word): edit_one_set.add(item)
-    for item in switch_letter(word): edit_one_set.add(item)
+    if allow_switches:
+        for item in switch_letter(word): edit_one_set.add(item)
     for item in replace_letter(word): edit_one_set.add(item)
     for item in insert_letter(word): edit_one_set.add(item)    
 
