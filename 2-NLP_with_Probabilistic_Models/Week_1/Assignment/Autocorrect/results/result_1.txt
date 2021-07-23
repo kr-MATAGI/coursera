@@ -1,0 +1,13 @@
+Code Cell UNQ_C1: Function 'process_data' is correct.
+Code Cell UNQ_C2: Function 'get_count' is correct.
+Code Cell UNQ_C3: Function 'get_probs' is correct.
+Code Cell UNQ_C4: Function 'delete_letter' is correct.
+Code Cell UNQ_C5: Function 'switch_letter' is correct.
+Code Cell UNQ_C6: Function 'replace_letter' is correct.
+Code Cell UNQ_C7: Function 'insert_letter' is correct.
+Code Cell UNQ_C8: Function 'edit_one_letter' is correct.
+Code Cell UNQ_C9: Function 'edit_two_letters' is correct.
+Code Cell UNQ_C10: Function 'get_corrections' is incorrect. Check implementation.
+Code Cell UNQ_C11: Function 'min_edit_distance' is correct. 
+If you see many functions being marked as incorrect, try to trace back your steps & identify if there is an incorrect function that is being used in other steps.
+This dependency may be the cause of the errors.

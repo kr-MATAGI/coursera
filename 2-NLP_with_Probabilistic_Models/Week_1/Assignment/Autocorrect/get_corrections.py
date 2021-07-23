@@ -41,6 +41,7 @@ def get_corrections(word, probs, vocab, n=2, verbose = False):
     
     for sugg in suggestions:
         n_best.append((sugg, probs.get(sugg, 0)))
+    n_best = sorted(n_best, key=lambda x:x[1])[::-1]
     n_best = n_best[:n]
     
     ### END CODE HERE ###
