@@ -35,7 +35,7 @@ def min_edit_distance(source, target, ins_cost = 1, del_cost = 1, rep_cost = 2):
         for col in range(1, len(target) + 1):
             
             # Intialize r_cost to the 'replace' cost that is passed into this function
-            r_cost = D[row-1][col-1] + 1
+            r_cost = D[row-1][col-1] + rep_cost
             
             # Check to see if source character at the previous row
             # matches the target character at the previous column, 
@@ -45,10 +45,10 @@ def min_edit_distance(source, target, ins_cost = 1, del_cost = 1, rep_cost = 2):
                 
             # Update the cost at row, col based on previous entries in the cost matrix
             # Refer to the equation calculate for D[i,j] (the minimum of three calculated costs)
-            D[row,col] = r_cost if r_cost < D[row-1][col] else D[row-1][col] + 1
+            D[row,col] = r_cost if r_cost < D[row-1][col] else D[row-1][col] + ins_cost
           
     # Set the minimum edit distance with the cost found at row m, column n
-    med = D[len(source)-1, len(target)-1]
+    med = D[len(source), len(target)]
     
     ### END CODE HERE ###
     return D, med
