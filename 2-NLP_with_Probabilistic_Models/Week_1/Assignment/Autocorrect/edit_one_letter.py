@@ -11,17 +11,11 @@ def edit_one_letter(word, allow_switches = True):
     
     edit_one_set = set()
     
-    ### START CODE HERE ###
-    del_func = delete_letter(word)
-    sw_func = switch_letter(word)
-    re_func = replace_letter(word)
-    ins_func = insert_letter(word) 
-    
-    for item in del_func: edit_one_set.add(item)
-    for item in sw_func: edit_one_set.add(item)
-    for item in re_func: edit_one_set.add(item)
-    for item in ins_func: edit_one_set.add(item)
-    
+    ### START CODE HERE ###    
+    for item in delete_letter(word): edit_one_set.add(item)
+    for item in switch_letter(word): edit_one_set.add(item)
+    for item in replace_letter(word): edit_one_set.add(item)
+    for item in insert_letter(word): edit_one_set.add(item)    
 
     ### END CODE HERE ###
 
