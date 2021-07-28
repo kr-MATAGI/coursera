@@ -16,13 +16,13 @@ def compute_accuracy(preds, y, y_weights):
     # True if the probability of positive sentiment is greater than
     # the probability of negative sentiment
     # else False
-    is_pos =  np.array([ True if x[0] < x[1] else False for x in preds ])
+    is_pos =  preds[:, 1] > preds[:, 0]
 
     # convert the array of booleans into an array of np.int32
     is_pos_int = is_pos.astype(dtype=np.int32)
     
     # compare the array of predictions (as int32) with the target (labels) of type int32
-    correct = np.array([is_pos_int == y])
+    correct = is_pos_int == y
 
     # Count the sum of the weights.
     sum_weights = len(y_weights)
