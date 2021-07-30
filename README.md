@@ -17,4 +17,5 @@
     * Sentiment with Deep Neural Networks
     * Deep N-grams
     * Named Entity Recognition (NER)
+      + [Graient-descent (optional)](https://blog.paperspace.com/intro-to-optimization-in-deep-learning-gradient-descent/)
     * Question duplicates
