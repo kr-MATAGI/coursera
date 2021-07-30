@@ -3,4 +3,15 @@
 하지만 간혹 Vanilla RNN이 더 느린 경우가 있다.
 
 
+>>> 
+LSTM은 vanila RNN의 vanishing gradient problem을 해결 했다고 검색이됨.
+그렇다면 vanishing gradient problem이 나타날때 성능이 낮아져 GRU보다 성능이 처리가 늦어지는가
+	> 보통 vanishing gradient problem은 활성화 함수로 인해 발생
+	
 >>>
+it can be difficult to train standard RNNs to solve problems that require learning long-term temporal dependencies. This is because the gradient of the loss function decays exponentially with time (called the vanishing gradient problem).
+
+>>> train 중 의존성이 길어짐에 따라 vanishing gradient 문제가 발생.
+
+ref:
+https://stats.stackexchange.com/questions/222584/difference-between-feedback-rnn-and-lstm-gru
