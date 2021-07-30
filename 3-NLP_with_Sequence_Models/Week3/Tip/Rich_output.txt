@@ -1,0 +1,9 @@
+%matplotlib inline
+-> notebook을 실행한 브라우저에서 바로 그림을 볼 수 있게 해주는 것
+	(코드를 실행한 바로 아래 부분에 plot을 show 한다.)
+-> Ipython 에서 제공하는 Rich output에 대한 표현방식.
+	* Rich output
+	- 도표와 같은 그림, 소리, 애니메이션과 같은 결과물들
+	
+	* '%'가 붙은 것은 IPython 명령이다.
+	
