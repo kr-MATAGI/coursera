@@ -20,3 +20,10 @@
       + [Graient-descent (optional)](https://blog.paperspace.com/intro-to-optimization-in-deep-learning-gradient-descent/)
       + [Understanding LSTMs](https://colah.github.io/posts/2015-08-Understanding-LSTMs/)
     * Question duplicates
+
+### 4. NLP with Attention Models
+  + Assignment Week 1 ~ 4
+    * Neural Machine Translation
+    * Text Summarization
+    * Question Answering
+    * Chatbot
