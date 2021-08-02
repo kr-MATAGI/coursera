@@ -14,7 +14,7 @@ def TripletLossFn(v1, v2, margin=0.25):
     ### START CODE HERE (Replace instances of 'None' with your code) ###
     
     # use fastnp to take the dot product of the two batches (don't forget to transpose the second argument)
-    scores = fastnp.dot( v1/fastnp.sqrt(np.sum(v1 * v1, axis=1, keepdims=True)), (v2/fastnp.sqrt(np.sum(v2 * v2, axis=1, keepdims=True))).T ) # pairwise cosine sim
+    scores = fastnp.dot(v1, v2.T)
     # calculate new batch size
     batch_size = len(scores)
     # use fastnp to grab all postive `diagonal` entries in `scores`
@@ -30,13 +30,13 @@ def TripletLossFn(v1, v2, margin=0.25):
     negative_zero_on_duplicate = (1.0 - fastnp.eye(batch_size)) * scores
     
     # use `fastnp.sum` on `negative_zero_on_duplicate` for `axis=1` and divide it by `(batch_size - 1)` 
-    mean_negative = fastnp.sum(negative_zero_on_duplicate, axis=1)
+    mean_negative = fastnp.sum(negative_zero_on_duplicate, axis=1) / (batch_size-1)
     # compute `fastnp.maximum` among 0.0 and `A`
     # A = subtract `positive` from `margin` and add `closest_negative` 
-    triplet_loss1 = fastnp.maximum(-1*positive + closest_negative + margin, 0)
+    triplet_loss1 = fastnp.maximum(closest_negative - positive + margin, 0)
     # compute `fastnp.maximum` among 0.0 and `B`
     # B = subtract `positive` from `margin` and add `mean_negative`
-    triplet_loss2 = fastnp.maximum(-1*positive + mean_negative + margin, 0)
+    triplet_loss2 = fastnp.maximum(mean_negative - positive + margin, 0)
     # add the two losses together and take the `fastnp.mean` of it
     triplet_loss = fastnp.mean(triplet_loss1 + triplet_loss2)
     
