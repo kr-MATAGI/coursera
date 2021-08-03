@@ -24,6 +24,7 @@
 ### 4. NLP with Attention Models
   + Assignment Week 1 ~ 4
     * Neural Machine Translation
+      + [What is Teacher Forcing](https://www.coursera.org/learn/attention-models-in-nlp/supplement/hf0UJ/optional-what-is-teacher-forcing)
     * Text Summarization
     * Question Answering
     * Chatbot
